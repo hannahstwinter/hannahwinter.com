@@ -7,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= react_component('NavBar') %>
+  <div id="main">
+    <%= yield %>
+  </div>
+  <%= react_component('Footer') %>
 </body>
 </html>
