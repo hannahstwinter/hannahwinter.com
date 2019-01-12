@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  get 'codingTips' => 'blog#coding_tips'
+  get 'foo' => 'blog#foo'
+  get 'resume' => 'resume#index'
+  get 'photo' => 'art#photo'
+  get 'sculpture_plus' => 'art#sculpture_plus'
+  get 'writing' => 'art#writing'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
