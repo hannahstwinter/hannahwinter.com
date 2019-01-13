@@ -4,34 +4,41 @@ NavMenuButtonDescription.displayName = 'NavMenuButton';
 
 NavMenuButtonDescription.propTypes = {
   title: React.PropTypes.string.isRequired,
-  menu: React.PropTypes.object,
+  className: React.PropTypes.string,
   route: React.PropTypes.string,
-  className: React.PropTypes.string
-};
-
-NavMenuButtonDescription.getInitialState = function () {
-  return {
-    menuVisible: false
-  }
+  menu: React.PropTypes.object,
+  visibleMenu: React.PropTypes.string,
+  setVisibleMenuItem: React.PropTypes.func
 };
 
 NavMenuButtonDescription.render = function () {
-  var menu, onClickFunction;
+  var handleClick, buttonClassNames;
 
-  menu = this.state.menuVisible ? this.props.menu : null;
-  onClickFunction = this.props.menu ? this.toggleMenuVisibility_ : this.navigateRoute_;
-  classNames = "nav-menu-button " + this.props.className;
+  handleClick = this.props.menu ? this.setVisibleMenuItem : this.navigateRoute_;
+  buttonClassNames = "nav-menu-button " + this.props.className;
 
   return (
-    <span>
-      <span className={ classNames } onClick={ onClickFunction } >{ this.props.title }</span>
-      <span>{ menu }</span>
+    <span onBlur={ this.unSetVisibleMenuItem }>
+      <span className={ buttonClassNames } onClick={ handleClick }>
+        { this.props.title }
+      </span>
+      { this._getMenu() }
     </span>
   );
 };
 
-NavMenuButtonDescription.toggleMenuVisibility_ = function () {
-  this.setState({ menuVisible: !this.state.menuVisible });
+NavMenuButtonDescription._getMenu = function () {
+  return this.props.title && (this.props.title == this.props.visibleMenu) ?
+    <span className={ "nav-menu-container " + this.props.className }>{ this.props.menu }</span> :
+    null;
+};
+
+NavMenuButtonDescription.unSetVisibleMenuItem = function () {
+  this.props.setVisibleMenuItem(null);
+};
+
+NavMenuButtonDescription.setVisibleMenuItem = function () {
+  this.props.setVisibleMenuItem(this.props.title);
 };
 
 NavMenuButtonDescription.navigateRoute_ = function () {

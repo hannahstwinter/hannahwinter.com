@@ -21,19 +21,21 @@ body {
   margin: 0;
 }
 
-a {
+a.footer_link {
   color: #CDCDCD;
 }
 
-a:hover {
+a.footer_link :hover {
   color: #E6E6E6;
 }
 
-#welcome {
-  margin-top: 0;
-  padding: 25px;
-  background-color: #3498DB;
-  color: #E6E6E6;
+#container {
+  position: relative;
+}
+
+#content {
+  height: 500px;
+  margin: 20px;
 }
 
 #footer {
@@ -42,68 +44,11 @@ a:hover {
   border-top: 1px solid #e7e7e7;
   padding: 15px 0;
   width: 100%;
-  height: 30px;
+  height: 20px;
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
 }
 
 .footer-text {
   padding: 15px;
-}
-
-#nav-bar {
-  color: #E6E6E6;
-  background-color: #4A4E4D;
-  position: relative;
-  border-bottom: 1px solid #e7e7e7;
-  padding: 25px 0;
-  width: 100%;
-}
-
-#nav-bar .nav-menu-button {
-  font-size: 14px;
-  color: #E6E6E6;
-  width: 300px;
-  padding: 20px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-#nav-bar .home-nav-button {
-  font-size: 18px;
-}
-
-#nav-bar .nav-menu-button:hover {
-  color: #CDCDCD;
-}
-
-.nav-menu {
-  position: absolute;
-  left: 30px;
-  z-index: 999;
-  width: 300px;
-  margin: 0;
-  padding: 10px;
-  list-style: none;
-  background: #fff;
-  color: #333;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-box-shadow: 0 0 5px #999;
-  -webkit-box-shadow: 0 0 5px #999;
-  box-shadow: 0 0 5px #999
-}
-
-.nav-menu li {
-  padding: 10px;
-  border-bottom: solid 1px #ccc;
-}
-
-.nav-menu li:hover {
-  background: #ecf0f1;
-}
-
-.nav-menu li:last-child {
-  border: none
 }

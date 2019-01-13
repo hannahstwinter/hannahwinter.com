@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HannahwinterDotCom</title>
+  <title>Hannah Winter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= react_component('NavBar') %>
-  <div id="main">
-    <%= yield %>
+  <div id="container">
+    <%= react_component('NavBar') %>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <%= react_component('Footer') %>
   </div>
-  <%= react_component('Footer') %>
 </body>
 </html>
