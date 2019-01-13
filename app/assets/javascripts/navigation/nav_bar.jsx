@@ -4,24 +4,31 @@ NavBarDescription.displayName = 'NavBar';
 
 NavBarDescription.getInitialState = function () {
   return {
-    visibleMenuId: null
+    visibleMenu: null
   }
 };
 
 NavBarDescription.render = function () {
+  var sharedMenuProps;
+
+  sharedMenuProps = {
+    visibleMenu: this.state.visibleMenu,
+    setVisibleMenuItem: this.setVisibleMenuItem
+  };
+
   return (
     <div id="nav-bar">
-      <NavMenuButton title="HW" route="/#" className="home-nav" />
-      <NavMenuButton title="Resume" route="/resume" className="resume-nav" />
-      <NavMenuButton title="Blog" className="blog" menu={ <BlogMenu /> } menuId={ 0 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
-      <NavMenuButton title="Projects" className="projects" menu={ <ProjectMenu /> } menuId={ 1 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
-      <NavMenuButton title="Art" className="art" menu={ <ArtMenu /> } menuId={ 2 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
+      <NavMenuButton title="HW" className="home-nav" route="/#" />
+      <NavMenuButton title="Resume" className="resume-nav" route="/resume" />
+      <NavMenuButton title="Blog" className="blog" menu={ <BlogMenu /> } { ...sharedMenuProps } />
+      <NavMenuButton title="Projects" className="projects" menu={ <ProjectMenu /> } { ...sharedMenuProps } />
+      <NavMenuButton title="Art" className="art" menu={ <ArtMenu /> } { ...sharedMenuProps } />
     </div>
   );
 };
 
-NavBarDescription.setVisibleMenuItem = function (id) {
-  this.setState({ visibleMenuId: id });
+NavBarDescription.setVisibleMenuItem = function (title) {
+  this.setState({ visibleMenu: title });
 };
 
 NavBar = React.createClass(NavBarDescription);

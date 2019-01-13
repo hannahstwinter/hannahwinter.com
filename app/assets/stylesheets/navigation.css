@@ -10,14 +10,18 @@
 #nav-bar .nav-menu-button {
   font-size: 14px;
   color: #E6E6E6;
-  width: 300px;
   padding: 20px;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-#nav-bar .home-nav {
+#nav-bar .nav-menu-button.home-nav {
   font-size: 18px;
+  padding: 20px 16px 20px 16px;
+  margin-left: 5px;
+  background-color: #f39c12;
+  /* teal: 39796c, orange: f39c12, grey: 333333 */
+  border-radius: 32px;
 }
 
 #nav-bar .nav-menu-button:hover {
