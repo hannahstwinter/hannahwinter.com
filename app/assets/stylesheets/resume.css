@@ -1,0 +1,82 @@
+/**
+ * general styles
+ */
+#resume .block {
+  padding: 10px 20px 10px 20px;
+}
+
+#resume .section-header {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#resume  .section-item .item-header {
+  margin: 0 20px 0 20px;
+  overflow: auto;
+}
+
+#resume .section-item .item-header .main {
+  float: left;
+}
+
+#resume .section-item .item-header .secondary {
+  float: right;
+}
+
+#resume .item-content {
+  margin-left: 20px;
+}
+
+#resume .marked-text-block-black {
+  padding-left: 10px;
+  border-left: 2px solid black;
+}
+
+#resume .marked-text-block-white {
+  padding-left: 10px;
+  border-left: 2px solid white;
+}
+
+/**
+ * section specific styles
+ */
+#resume #contact-info {
+  overflow: auto;
+}
+
+#resume #contact-info .section-header {
+  float: left;
+  padding-top: 15px;
+}
+
+#resume #contact-info .section-header .name {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+#resume #contact-info .section-header .title {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+#resume #contact-info .section-item {
+  margin: 0 20px 5px 0;
+  float: right;
+}
+
+#resume #overview {
+  background-color: #4f5665;
+  color: white;
+}
+
+#resume #skills {
+  background-color: black;
+  color: white;
+}
+
+#resume #education {
+  background-color: #4f5665;
+  color: white;
+}
