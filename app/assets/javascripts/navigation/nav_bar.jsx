@@ -1,16 +1,26 @@
-NavBarDefinition = {};
+NavBarDescription = {};
 
-NavBarDefinition.displayName = 'NavBar';
+NavBarDescription.displayName = 'NavBar';
 
-NavBarDefinition.render = function () {
+NavBarDescription.getInitialState = function () {
+  return {
+    visibleMenuId: null
+  }
+};
+
+NavBarDescription.render = function () {
   return (
     <div id="nav-bar">
       <NavMenuButton title="Home" route="/#" className="home-nav-button" />
       <NavMenuButton title="Resume" route="/resume" className="resume-nav-button" />
-      <NavMenuButton title="Blog" route="/blog" className="blog-button" menu={ <BlogMenu /> } />
-      <NavMenuButton title="Art" route="/art" className="art-button" menu={ <ArtMenu /> } />
+      <NavMenuButton title="Blog" className="blog-button" menu={ <BlogMenu /> } menuId={ 0 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
+      <NavMenuButton title="Art" className="art-button" menu={ <ArtMenu /> } menuId={ 1 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
     </div>
   );
 };
 
-NavBar = React.createClass(NavBarDefinition);
+NavBarDescription.setVisibleMenuItem = function (id) {
+  this.setState({ visibleMenuId: id });
+};
+
+NavBar = React.createClass(NavBarDescription);

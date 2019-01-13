@@ -6,16 +6,12 @@ BlogMenuDescription.render = function () {
   var menuItems;
 
   menuItems = [
-    <NavElement title="Coding Tips" route="/codingTips" />
+    <NavElement title="Coding Tips" route="/coding_tips" />
   ];
 
   return (
     <NavMenu items={ menuItems } />
   );
-};
-
-BlogMenuDescription.navigateRoute_ = function (route) {
-  location.href = route;
 };
 
 BlogMenu = React.createClass(BlogMenuDescription);

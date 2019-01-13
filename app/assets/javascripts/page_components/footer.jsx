@@ -1,6 +1,6 @@
-FooterDefinition = {};
+FooterDescription = {};
 
-FooterDefinition.render = function () {
+FooterDescription.render = function () {
   return (
     <span id="footer">
       <span className="footer-text">
@@ -11,4 +11,4 @@ FooterDefinition.render = function () {
   );
 };
 
-Footer = React.createClass(FooterDefinition);
+Footer = React.createClass(FooterDescription);

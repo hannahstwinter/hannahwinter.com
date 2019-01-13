@@ -16,8 +16,4 @@ ArtMenuDescription.render = function () {
   );
 };
 
-ArtMenuDescription.navigateRoute_ = function (route) {
-  location.href = route;
-};
-
 ArtMenu = React.createClass(ArtMenuDescription);

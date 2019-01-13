@@ -10,7 +10,13 @@ NavMenuDescription.render = function () {
   var itemsList;
 
   itemsList = this.props.items.map(function (item) {
-    return <li className="nav-menu-item">{ item }</li>;
+    var navigateRoute;
+
+    navigateRoute = function () {
+      location.href = item.props.route;
+    };
+
+    return <li className="nav-menu-item" onMouseDown={ navigateRoute } key={ item.props.title }>{ item }</li>;
   });
 
   return (
@@ -18,10 +24,6 @@ NavMenuDescription.render = function () {
       { itemsList }
     </ul>
   );
-};
-
-NavMenuDescription.navigateRoute_ = function (route) {
-  location.href = route;
 };
 
 NavMenu = React.createClass(NavMenuDescription);

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  get 'codingTips' => 'blog#coding_tips'
+  get 'coding_tips' => 'blog#coding_tips'
   get 'foo' => 'blog#foo'
   get 'resume' => 'resume#index'
   get 'photo' => 'art#photo'
