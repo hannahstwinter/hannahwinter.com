@@ -15,11 +15,11 @@
   text-transform: uppercase;
 }
 
-#nav-bar .nav-menu-button.home-nav {
+#nav-bar .nav-menu-button.home {
   font-size: 18px;
   padding: 20px 16px 20px 16px;
   margin-left: 5px;
-  background-color: #f39c12;
+  background-color: #39796c;
   /* teal: 39796c, orange: f39c12, grey: 333333 */
   border-radius: 32px;
 }
