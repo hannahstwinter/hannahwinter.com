@@ -13,18 +13,19 @@ NavMenuButtonDescription.propTypes = {
 };
 
 NavMenuButtonDescription.render = function () {
-  var menu, onClickFunction, classNames;
+  var menu, onClickFunction, buttonClassNames;
 
   menu = (this.props.visibleMenuId == this.props.menuId) ? this.props.menu : null;
   onClickFunction = this.props.menu ? this.setVisibleMenuItem : this.navigateRoute_;
-  classNames = "nav-menu-button " + this.props.className;
+  buttonClassNames = "nav-menu-button " + this.props.className;
+  menuClassNames = "nav-menu-container " + this.props.className;
 
   return (
     <span onBlur={ this.unSetVisibleMenuItem }>
-      <span className={ classNames } onClick={ onClickFunction } tabIndex={ this.props.menuId }>
+      <span className={ buttonClassNames } onClick={ onClickFunction } tabIndex={ this.props.menuId }>
         { this.props.title }
       </span>
-      <span>{ menu }</span>
+      <span className={ menuClassNames }>{ menu }</span>
     </span>
   );
 };

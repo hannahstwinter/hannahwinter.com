@@ -11,10 +11,11 @@ NavBarDescription.getInitialState = function () {
 NavBarDescription.render = function () {
   return (
     <div id="nav-bar">
-      <NavMenuButton title="Home" route="/#" className="home-nav-button" />
-      <NavMenuButton title="Resume" route="/resume" className="resume-nav-button" />
-      <NavMenuButton title="Blog" className="blog-button" menu={ <BlogMenu /> } menuId={ 0 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
-      <NavMenuButton title="Art" className="art-button" menu={ <ArtMenu /> } menuId={ 1 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
+      <NavMenuButton title="HW" route="/#" className="home-nav" />
+      <NavMenuButton title="Resume" route="/resume" className="resume-nav" />
+      <NavMenuButton title="Blog" className="blog" menu={ <BlogMenu /> } menuId={ 0 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
+      <NavMenuButton title="Projects" className="projects" menu={ <ProjectMenu /> } menuId={ 1 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
+      <NavMenuButton title="Art" className="art" menu={ <ArtMenu /> } menuId={ 2 } visibleMenuId={ this.state.visibleMenuId } setVisibleMenuItem={ this.setVisibleMenuItem } />
     </div>
   );
 };

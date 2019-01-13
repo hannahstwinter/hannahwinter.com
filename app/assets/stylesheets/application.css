@@ -21,11 +21,11 @@ body {
   margin: 0;
 }
 
-a {
+a.footer_link {
   color: #CDCDCD;
 }
 
-a:hover {
+a.footer_link :hover {
   color: #E6E6E6;
 }
 

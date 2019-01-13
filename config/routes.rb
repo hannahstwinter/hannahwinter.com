@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'coding_tips' => 'blog#coding_tips'
   get 'foo' => 'blog#foo'
   get 'resume' => 'resume#index'
+  get 'resourceful' => 'projects#resourceful'
   get 'photo' => 'art#photo'
   get 'sculpture_plus' => 'art#sculpture_plus'
   get 'writing' => 'art#writing'

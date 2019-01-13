@@ -4,8 +4,8 @@ FooterDescription.render = function () {
   return (
     <span id="footer">
       <span className="footer-text">
-        check me out on <a target="_blank" href="https://www.github.com/hannahstwinter">GitHub</a> or
-          <a target="_blank" href="https://www.linkedin.com/in/hannahstwinter"> LinkedIn</a>
+        check me out on <a className="footer_link" target="_blank" href="https://www.github.com/hannahstwinter">GitHub</a> or
+          <a className="footer_link" target="_blank" href="https://www.linkedin.com/in/hannahstwinter"> LinkedIn</a>
       </span>
     </span>
   );
