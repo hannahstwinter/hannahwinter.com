@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get 'sculpture_plus' => 'art#sculpture_plus'
   get 'writing' => 'art#writing'
 
+  get 'blog' => 'blog#index'
+  get 'projects' => 'projects#index'
+  get 'art' => 'art#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
