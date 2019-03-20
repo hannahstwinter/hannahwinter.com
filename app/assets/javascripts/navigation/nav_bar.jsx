@@ -23,6 +23,10 @@ NavBarDescription.render = function () {
       <NavMenuButton title="Blog" className="blog" menu={ <BlogMenu /> } { ...sharedMenuProps } />
       <NavMenuButton title="Projects" className="projects" menu={ <ProjectMenu /> } { ...sharedMenuProps } />
       <NavMenuButton title="Art" className="art" menu={ <ArtMenu /> } { ...sharedMenuProps } />
+
+      <NavMenuButton title="Blog Tabs" className="blog_tab" route="/blog" />
+      <NavMenuButton title="Projects Tabs" className="projects_tab" route="/projects" />
+      <NavMenuButton title="Art Tabs" className="art_tab" route="/art" />
     </div>
   );
 };

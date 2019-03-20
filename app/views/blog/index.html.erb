@@ -1,0 +1,7 @@
+<div class="tabbed-page-content">
+  <% @tabs.each do |tab| %>
+    <%= tab[:title] %>
+    <%= tab[:content] %>
+  <% end %>
+  <%= react_component('TabbedBlog') %>
+</div>

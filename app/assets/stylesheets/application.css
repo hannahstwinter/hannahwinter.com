@@ -16,7 +16,6 @@
 
 body {
   font-family: 'Verdana', sans-serif;
-  background-color: #E6E6E6;
   color: #2c3e50;
   margin: 0;
 }
@@ -33,22 +32,6 @@ a.footer_link :hover {
   position: relative;
 }
 
-#content {
-  height: 500px;
-  margin: 20px;
-}
-
-#footer {
-  color: #E6E6E6;
-  background-color: #4A4E4D;
-  border-top: 1px solid #e7e7e7;
-  padding: 15px 0;
-  width: 100%;
-  height: 20px;
-  position: absolute;
-  bottom: -20px;
-}
-
-.footer-text {
-  padding: 15px;
+.page-content {
+  margin: 0 20px 0 20px;
 }
